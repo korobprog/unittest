@@ -6,7 +6,6 @@
     "jest": true
   },
   "rules": {
-    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
-    "linebreak-style": ["error", "windows"]
+    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"]
   }
 }
