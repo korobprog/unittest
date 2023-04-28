@@ -1,11 +1,15 @@
 {
-  "extends": "airbnb-base",
+  "extends": ["plugin:prettier/recommended"],
+  "plugins": ["prettier"],
   "env": {
     "es6": true,
     "browser": true,
     "jest": true
   },
   "rules": {
-    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"]
+    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off"
   }
 }
