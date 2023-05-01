@@ -5,7 +5,7 @@ const heroes = [
 ];
 
 heroes.sort((a, b) => b.health - a.health);
-const stroy = heroes.forEach((item) => {
+const stroy = heroes.map((item) => {
   calcLiving(item);
 });
 
@@ -20,4 +20,8 @@ function calcLiving(stroy) {
   return;
 }
 
-calcLiving();
+calcLiving(stroy);
+
+module.exports = {
+  calcLiving,
+};
