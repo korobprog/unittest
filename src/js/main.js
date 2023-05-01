@@ -4,10 +4,11 @@ const heroes = [
   { name: "лучник", health: 80 },
 ];
 
-heroes.sort((a, b) => b.health - a.health);
-const stroy = heroes.map((item) => {
-  calcLiving(item);
-});
+const stroy = heroes
+  .sort((a, b) => b.health - a.health)
+  .map((item) => {
+    calcLiving(item);
+  });
 
 function calcLiving(stroy) {
   if (stroy.health > 51) {
@@ -19,8 +20,6 @@ function calcLiving(stroy) {
   }
   return;
 }
-
-calcLiving(stroy);
 
 module.exports = {
   calcLiving,
