@@ -4,7 +4,7 @@ const heroes = [
   { name: "лучник", health: 80 },
 ];
 
-let stroy = heroes
+const stroy = heroes
   .sort((a, b) => b.health - a.health)
   .map((item) => {
     calcLiving(item);
@@ -12,7 +12,7 @@ let stroy = heroes
 
 export default function calcLiving(stroy) {
   const { health } = stroy;
-  if (health > 51) {
+  if (health >= 51) {
     return "healthy";
   } else if (health <= 50 && health >= 15) {
     return "wounded";
